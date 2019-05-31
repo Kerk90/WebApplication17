@@ -29,7 +29,7 @@ public class Reader implements Serializable {
     public Reader() {
     }
 
-    public Reader(String name, String surname, String phone) {
+     public Reader(String name, String surname, String phone) {
         this.name = name;
         this.surname = surname;
         this.phone = phone;

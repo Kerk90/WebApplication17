@@ -31,8 +31,7 @@ public class Book implements Serializable {
 
     public Book() {
     }
-
-    public Book(String name, String author, String isbn, int publishedYear, 
+ public Book(String name, String author, String isbn, int publishedYear, 
             int quantity, int count) {
         this.name = name;
         this.author = author;
@@ -161,3 +160,4 @@ public class Book implements Serializable {
     
     
 }
+    

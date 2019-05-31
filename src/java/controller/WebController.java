@@ -45,7 +45,7 @@ public class WebController extends HttpServlet {
 @EJB ReaderFacade readerFacade;
 @EJB HistoryFacade historyFacade;
    
-    protected void processRequest(HttpServletRequest request,
+     protected void processRequest(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -129,9 +129,9 @@ public class WebController extends HttpServlet {
                         .forward(request, response);
                 break;
             case "/returnBook":
-                String historyId=request.getParameter("historyId");
+                String historyId = request.getParameter("historyId");
                 history = historyFacade.find(new Long(historyId));
-                c=new GregorianCalendar();
+                c = new GregorianCalendar();
                 history.setDateReturnBook(c.getTime());
                 historyFacade.edit(history);
                 request.getRequestDispatcher("/index.jsp")
@@ -179,5 +179,4 @@ public class WebController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
